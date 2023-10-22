@@ -1,23 +1,22 @@
 :root {
-  --dark-blue-color--: #112D4E;
-  --light-blue-color--: #3F72AF;
-  --light-gray-color--: #DBE2EF;
-  --white-color--: #F9F7F7;
+  --text: #070303;
+  --background: #fffeec;
+  --primary: #E5BA73;
+  --secondary: #FAEAB1;
+  --accent: #C58940;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  background-color: var(--bg-color--);
+  background-color: var(--background);
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
-
-
