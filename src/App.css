@@ -4,12 +4,31 @@
   --primary: #E5BA73;
   --secondary: #FAEAB1;
   --accent: #C58940;
+  --scroll-bar--: #c5894085;
+}
+
+/* ===== Scrollbar CSS ===== */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-bar--);
+  border-radius: 15px;
+  border: 1px solid white;
+
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-bar--) var(--background);
 }
 
 body {
