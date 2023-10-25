@@ -1,11 +1,14 @@
 :root {
-  --text: #070303;
-  --background: #fffeec;
-  --primary: #E5BA73;
-  --secondary: #FAEAB1;
-  --accent: #C58940;
-  --scroll-bar--: #c5894085;
+  --background: #E3D0BA;
+  --background-sec: #D9C4AC;
+  --text: #52301C;
+  --sec-text: #81634E;
+  --brand: #5C3928;
+  --border-color: #cdb8a2;
+
+  --scroll-bar-color--: #81634e7e;
 }
+
 
 /* ===== Scrollbar CSS ===== */
 *::-webkit-scrollbar {
@@ -17,18 +20,18 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: var(--scroll-bar--);
+  background-color: var(--scroll-bar-color--);
   border-radius: 15px;
-  border: 1px solid white;
-
 }
+
+/* ====================================== */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scrollbar-width: thin;
-  scrollbar-color: var(--scroll-bar--) var(--background);
+  scrollbar-color: var(--scroll-bar-color--) var(--background);
 }
 
 body {

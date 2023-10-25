@@ -1,10 +1,214 @@
 .nav {
-  font-family: 'Nanum Myeongjo', serif;
-  font-weight: 500;
+  background: var(--background-sec);
+  background-image: linear-gradient(180deg, var(--background-sec)100%, var(--sec-text) 40%);
+  height: 60px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 
-.brand {
-  font-family: 'Cormorant Garamond',
-    serif;
-  font-size: 2rem;
+/* Brand Logo */
+.nav .brand {
+  display: flex;
+  justify-content: center;
+  color: var(--brand);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  width: 20%;
+  position: relative;
+
+}
+
+.nav .brand>a {
+  padding: 14px 16px;
+}
+
+
+/* Nav Links */
+
+.nav .nav-links {
+  display: flex;
+  font-size: .8rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  width: 40%;
+}
+
+.nav .left-links {
+  justify-content: start;
+  color: var(--text);
+}
+
+.nav .right-links {
+  justify-content: end;
+  color: var(--sec-text);
+}
+
+
+.left-links .drop-container>a,
+.right-links>a,
+.right-links>div {
+  /* (.right-links *) to select all child element of .right-links */
+
+  padding: 1.3rem .3rem;
+  margin: 0 1rem;
+}
+
+
+.right-links>a:hover,
+.right-links>div:hover {
+  color: var(--text);
+  cursor: pointer;
+}
+
+
+/* Dropdown menu */
+.drop-container {
+  display: flex;
+}
+
+.drop-items-container {
+  display: none;
+  font-size: .8rem;
+  font-weight: 600;
+  background-color: var(--background-sec);
+  width: 100%;
+  max-height: 80vh;
+  top: 60px;
+  left: 0;
+  position: absolute;
+  justify-content: center;
+  gap: 6rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.drop-container:hover .drop-items-container {
+  display: flex;
+}
+
+
+/* Left menu hover underline */
+
+.left-links .drop-container>a {
+  position: relative;
+}
+
+.left-links .drop-container>a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--text);
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.left-links .drop-container>a:hover::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+/* dropdown list css */
+
+.category {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 3rem 0;
+}
+
+.category .heading {
+  margin-bottom: .5rem;
+}
+
+.category>div:not(.heading) {
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--sec-text);
+}
+
+.category>div:hover {
+  color: var(--text);
+  cursor: pointer;
+}
+
+/* ======================= */
+
+
+/* side cart  */
+
+/* =============== */
+
+/* Nav Right icons for mobile */
+.icons-container {
+  display: none;
+  justify-content: end;
+  width: 25%;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+  margin-right: .8rem;
+}
+
+.right-icons {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.left-icons-container {
+  display: none;
+  justify-content: start;
+  width: 25%;
+  margin-left: .8rem;
+}
+
+.nav-icons {
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* ============================ */
+
+
+@media (max-width:1020px) {
+  .nav {
+    justify-content: space-between;
+  }
+
+  .nav .nav-links {
+    display: none;
+  }
+
+  .brand {
+    width: 50%;
+    width: fit-content;
+  }
+
+  .nav .brand>a {
+    white-space: nowrap;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .icons-container,
+  .left-icons-container {
+    display: flex;
+  }
+}
+
+@media (max-width:600px) {
+  .nav .hide-icon {
+    display: none;
+  }
 }
