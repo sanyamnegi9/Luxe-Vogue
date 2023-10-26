@@ -1,7 +1,7 @@
 const Home = () => {
   return (
     <>
-      <div>Home</div>
+      <div style={{height: "10rem"}}>Home</div>
     </>
   );
 };

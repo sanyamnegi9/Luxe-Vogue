@@ -4,23 +4,26 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: relative;
   justify-content: space-between;
   bottom: 0;
-  gap: 2rem;
+  gap: 1rem;
   padding: 4rem 2rem 1rem 2rem;
   font-size: .7rem;
 }
 
 .footer-content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: 2rem;
+  max-width: 100%;
 }
 
 .footer-content>div {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
+  max-width: 24rem;
 }
 
 
@@ -62,7 +65,7 @@ button {
   color: var(--sec-text);
 }
 
-.footer .social-icons > :hover{
+.footer .social-icons> :hover {
   color: var(--text);
 }
 
@@ -113,4 +116,21 @@ button {
   line-height: 1.29;
   color: #fff;
 
+}
+
+
+@media (max-width:1020px) {
+  .footer-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width:720px) {
+
+  .footer-content{
+    flex-direction: column;
+  }
+
+  .footer-content > div{
+  }
 }
