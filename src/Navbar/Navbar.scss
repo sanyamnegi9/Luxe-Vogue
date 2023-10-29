@@ -1,6 +1,8 @@
-.nav {
-  background: var(--background-sec);
-  background-image: linear-gradient(180deg, var(--background-sec)100%, var(--sec-text) 40%);
+@import "../Styles/variables";
+
+.navbar {
+  background: $background-sec;
+  background-image: linear-gradient(180deg, $background-sec 100%, $sec-text 40%);
   height: 60px;
   width: 100%;
   position: relative;
@@ -11,10 +13,10 @@
 }
 
 /* Brand Logo */
-.nav .brand {
+.navbar .brand {
   display: flex;
   justify-content: center;
-  color: var(--brand);
+  color: $brand;
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.2rem;
   width: 20%;
@@ -22,14 +24,14 @@
 
 }
 
-.nav .brand>a {
+.navbar .brand>a {
   padding: 14px 16px;
 }
 
 
 /* Nav Links */
 
-.nav .nav-links {
+.navbar .navbar-links {
   display: flex;
   font-size: .8rem;
   font-weight: 500;
@@ -37,14 +39,14 @@
   width: 40%;
 }
 
-.nav .left-links {
+.navbar .left-links {
   justify-content: start;
-  color: var(--text);
+  color: $text;
 }
 
-.nav .right-links {
+.navbar .right-links {
   justify-content: end;
-  color: var(--sec-text);
+  color: $sec-text;
 }
 
 
@@ -60,7 +62,7 @@
 
 .right-links>a:hover,
 .right-links>div:hover {
-  color: var(--text);
+  color: $text;
   cursor: pointer;
 }
 
@@ -74,7 +76,7 @@
   display: none;
   font-size: .8rem;
   font-weight: 600;
-  background-color: var(--background-sec);
+  background-color: $background-sec;
   width: 100%;
   max-height: 80vh;
   top: 60px;
@@ -104,7 +106,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background-color: var(--text);
+  background-color: $text;
   transform-origin: bottom right;
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
@@ -133,11 +135,11 @@
 .category>div:not(.heading) {
   font-weight: 500;
   text-transform: capitalize;
-  color: var(--sec-text);
+  color: $sec-text;
 }
 
 .category>div:hover {
-  color: var(--text);
+  color: $text;
   cursor: pointer;
 }
 
@@ -172,20 +174,20 @@
   margin-left: .8rem;
 }
 
-.nav-icons {
+.navbar-icons {
   cursor: pointer;
-  color: var(--text);
+  color: $text;
 }
 
 /* ============================ */
 
 
 @media (max-width:1020px) {
-  .nav {
+  .navbar {
     justify-content: space-between;
   }
 
-  .nav .nav-links {
+  .navbar .navbar-links {
     display: none;
   }
 
@@ -194,7 +196,7 @@
     width: fit-content;
   }
 
-  .nav .brand>a {
+  .navbar .brand>a {
     white-space: nowrap;
     font-size: 1rem;
     padding: 0;
@@ -208,7 +210,7 @@
 }
 
 @media (max-width:600px) {
-  .nav .hide-icon {
+  .navbar .hide-icon {
     display: none;
   }
 }

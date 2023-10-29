@@ -1,0 +1,59 @@
+@import "../Styles/variables";
+
+
+
+.products-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: $margin-top 0;
+  padding: 0 1.5rem;
+}
+
+.product-card {
+  background-color: $background-sec;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  border-radius: 15px;
+  padding: .7rem 0;
+}
+
+.product-card .product-info {
+  width: 100%;
+  text-align: center;
+  color: $text;
+  padding: 0 .4rem;
+}
+
+.product-info .brand-name {
+  color: $text;
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+
+.product-info .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: .9rem;
+  font-weight: 600;
+
+}
+
+.product-info .price {}
+
+.product-img{
+  text-align: center;
+  height: 250px;
+  width: 100%;
+}
+
+.product-img > img {
+  height: 100%;
+  border-radius: 10px;
+}

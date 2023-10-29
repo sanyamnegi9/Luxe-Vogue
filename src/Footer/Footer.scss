@@ -1,6 +1,8 @@
+@import "../Styles/variables";
+
 .footer {
-  background: var(--background-sec);
-  background-image: linear-gradient(180deg, var(--background-sec)100%, var(--sec-text) 40%);
+  background: $background-sec;
+  background-image: linear-gradient(180deg, $background-sec 100%, $sec-text 40%);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -29,10 +31,11 @@
 
 .footer-content>div>h3 {
   text-transform: uppercase;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 1px;
   margin: 0 0 1rem 0;
-  color: var(--text);
+  color: $text;
 }
 
 .footer-content>div>p,
@@ -40,7 +43,7 @@ a,
 input,
 button {
   margin: .5rem 0;
-  color: var(--sec-text);
+  color: $sec-text;
   padding: .2rem 0;
   letter-spacing: 1px;
   font-size: .8rem;
@@ -48,7 +51,7 @@ button {
 }
 
 .footer-content>div>a:hover {
-  color: var(--text);
+  color: $text;
 }
 
 
@@ -62,11 +65,11 @@ button {
 .footer .social-icons {
   display: inline-flex;
   gap: 2rem;
-  color: var(--sec-text);
+  color: $sec-text;
 }
 
 .footer .social-icons> :hover {
-  color: var(--text);
+  color: $text;
 }
 
 
@@ -82,11 +85,11 @@ button {
 .email-input {
   padding: 0 8px;
   vertical-align: middle;
-  color: var(--text);
+  color: $text;
   width: 100%;
   min-height: 50px;
   background-color: transparent;
-  border: 1px solid var(--border-color);
+  border: 1px solid $border-color;
   transition: all 0.2s ease-in-out 0s;
   font-size: 16px;
   line-height: 18px;
@@ -95,7 +98,7 @@ button {
 
 .email-input:focus {
   outline: none;
-  border: 1px solid var(--sec-text);
+  border: 1px solid $sec-text;
   /* box-shadow: inset 0 0 0 1px var(--sec-text); */
 }
 
@@ -108,7 +111,7 @@ button {
   border: 1px solid transparent;
   text-align: center;
   vertical-align: top;
-  background-color: var(--text);
+  background-color: $text;
   font-size: 14px;
   letter-spacing: 0.16px;
   max-width: 150px;
@@ -131,6 +134,4 @@ button {
     flex-direction: column;
   }
 
-  .footer-content > div{
-  }
 }

@@ -1,4 +1,4 @@
-import "./Navbar.css";
+import "./Navbar.scss";
 import { NavLink, Link } from "react-router-dom";
 import OnTheTop from "./OnTheTop";
 import InTheHome from "./InTheHome";
@@ -15,11 +15,11 @@ const cartValue = 0;
 const Navbar = () => {
   const [cartOpen, setCartOpen] = useState(false);
   return (
-    <div className="nav">
+    <div className="navbar">
       <div className="left-icons-container">
-        <MenuIcon className="nav-icons" />
+        <MenuIcon className="navbar-icons" />
       </div>
-      <div className="nav-links left-links">
+      <div className="navbar-links left-links">
         <div className="drop-container">
           <Link>ON THE BODY</Link>
           <OnTheTop />
@@ -37,7 +37,7 @@ const Navbar = () => {
         <Link to="/">LUXE VOGUE</Link>
       </div>
 
-      <div className="nav-links right-links">
+      <div className="navbar-links right-links">
         <NavLink to="/contact">ACCOUNT</NavLink>
         <NavLink>SEARCH</NavLink>
         {/* <div className="side-cart"> */}
@@ -46,9 +46,9 @@ const Navbar = () => {
         {/* </div> */}
       </div>
       <div className="icons-container">
-        <PermIdentityIcon className="nav-icons hide-icon"/>
-        <SearchIcon className="nav-icons" />
-        <ShoppingCartIcon className="nav-icons" />
+        <PermIdentityIcon className="navbar-icons hide-icon"/>
+        <SearchIcon className="navbar-icons" />
+        <ShoppingCartIcon className="navbar-icons" />
       </div>
     </div>
   );

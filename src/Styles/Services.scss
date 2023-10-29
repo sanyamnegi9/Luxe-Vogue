@@ -1,0 +1,42 @@
+@import "../Styles/variables";
+
+.services {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.service-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.service-items {
+  color: $text;
+}
+
+.service-items>p {
+  color: $sec-text;
+  font-size: .7rem;
+  font-weight: 500;
+
+}
+
+.services-carousel {
+  display: none;
+}
+
+@media (max-width:640px) {
+  .services-carousel{
+    display: block;
+  }
+  .services{
+    display: none;
+  }
+}

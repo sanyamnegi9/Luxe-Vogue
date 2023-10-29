@@ -1,0 +1,27 @@
+@import "../Styles/variables";
+
+.new-arrival {
+  height: 600px;
+  width: 100%;
+  background-image: url("../Assets/images/carousel4.jpg");
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-arrival>a {
+  padding: .5rem 1rem;
+  text-align: center;
+  height: 2.7rem;
+  width: 12rem;
+  font-size: 1rem;
+  background-color: transparent;
+  color: white;
+  border: 1.5px solid white;
+}
+
+.new-arrival>a:hover {
+  background-color: rgba($color: white, $alpha: .5);
+}

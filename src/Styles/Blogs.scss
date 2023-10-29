@@ -1,0 +1,66 @@
+@import "../Styles/variables";
+
+.blogs {
+  display: flex;
+  flex-direction: column;
+  margin: $margin-top 0;
+  border-bottom: 1.5px solid $border-color;
+}
+
+.heading {
+  text-align: center;
+  color: $text;
+}
+
+.blog-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.Blog-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.Blog-btn>button {
+  width: 10rem;
+}
+
+.blog-card {
+  height: 480px;
+  width: 300px;
+  margin: 1rem 0;
+}
+
+.blog-info {
+  color: $text;
+  margin-top: 1rem;
+}
+
+.blog-info .title {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.blog-info .desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical ;
+  overflow: hidden;
+  font-size: .9rem;
+  font-weight: 600;
+  padding-right: .5rem;
+  word-spacing: 1.2px;
+  letter-spacing: .5px;
+}
+
+
+.blog-card img {
+  height: 300px;
+}
