@@ -1,15 +1,15 @@
 import "../Styles/Products.scss";
-import product1 from "../Assets/images/product1.jpg";
-const ProductCard = () => {
+
+const ProductCard = ({ id, img, brand, title, price }) => {
   return (
-    <div className="product-card">
+    <div className="product-card" id={id}>
       <div className="product-img">
-        <img src={product1} alt="" />
+        <img src={img} alt="" />
       </div>
       <div className="product-info">
-        <p className="brand-name">Evam eva</p>
-        <p className="title">Cashmere High Neck Pullover Sweater</p>
-        <p className="price">₹ 615.00</p>
+        <p className="brand-name">{brand}</p>
+        <p className="title">{title}</p>
+        <p className="price">{`₹ ${price}`}</p>
       </div>
       <button>Add to Cart</button>
     </div>

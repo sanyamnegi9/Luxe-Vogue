@@ -6,10 +6,14 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1.5rem;
   margin: $margin-top 0;
   padding: 0 1.5rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
 }
 
 .product-card {
@@ -42,18 +46,27 @@
   white-space: nowrap;
   font-size: .9rem;
   font-weight: 600;
+  text-transform: capitalize;
 
 }
 
-.product-info .price {}
-
-.product-img{
+.product-img {
   text-align: center;
   height: 250px;
   width: 100%;
 }
 
-.product-img > img {
+.product-img>img {
   height: 100%;
+  border-radius: 10px;
+}
+
+
+.product-card button {
+  padding: .5rem 1.5rem;
+  font-weight: 600;
+  color: white;
+  background-color: $text;
+  border: none;
   border-radius: 10px;
 }

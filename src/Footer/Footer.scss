@@ -38,6 +38,10 @@
   color: $text;
 }
 
+.footer-content .newsletter{
+  width: 320px;
+}
+
 .footer-content>div>p,
 a,
 input,
@@ -131,7 +135,11 @@ button {
 @media (max-width:720px) {
 
   .footer-content{
+    width: 100%;
     flex-direction: column;
   }
+    .footer-content>div {
+      max-width: 100%;
+    }
 
 }
