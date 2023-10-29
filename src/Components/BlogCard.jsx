@@ -14,6 +14,8 @@ const BlogCard = ({ img, title, desc, link }) => {
       </div>
       <Link to={link}>Read more...</Link>
     </div>
+
+    
   );
 };
 
