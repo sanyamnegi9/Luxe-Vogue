@@ -28,23 +28,23 @@ const Services = () => {
       {/* mobile */}
       <div
         id="carouselExampleInterval"
-        class="carousel slide services-carousel"
+        className="carousel slide services-carousel"
         data-bs-ride="carousel"
       >
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="700">
+        <div className="carousel-inner">
+          <div className="carousel-item active" data-bs-interval="700">
             <div className="service-items">
               <FontAwesomeIcon icon={faTruckFast} fade size="2xl" />
               <p>Free shipping over ₹500</p>
             </div>
           </div>
-          <div class="carousel-item" data-bs-interval="600">
+          <div className="carousel-item" data-bs-interval="600">
             <div className="service-items">
               <FontAwesomeIcon icon={faPaperPlane} fade size="2xl" />
               <p>Questions? contact Us</p>
             </div>
           </div>
-          <div class="carousel-item">
+          <div className="carousel-item">
             <div className="service-items">
               <FontAwesomeIcon icon={faRotateLeft} fade size="2xl" />
               <p>Easy Return</p>

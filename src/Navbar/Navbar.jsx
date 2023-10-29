@@ -3,7 +3,6 @@ import { NavLink, Link } from "react-router-dom";
 import OnTheTop from "./OnTheTop";
 import InTheHome from "./InTheHome";
 import Designers from "./Designers";
-import SideCart from "./SideCart";
 import { useState } from "react";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import SearchIcon from "@mui/icons-material/Search";
@@ -15,7 +14,7 @@ const cartValue = 0;
 const Navbar = () => {
   const [cartOpen, setCartOpen] = useState(false);
   return (
-    <div className="navbar">
+    <div className="navbar-container">
       <div className="left-icons-container">
         <MenuIcon className="navbar-icons" />
       </div>
