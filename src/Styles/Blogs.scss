@@ -7,6 +7,18 @@
   border-bottom: 1.5px solid $border-color;
 }
 
+
+
+.blog-item::-webkit-scrollbar {
+  width: 0.1em;
+  /* Adjust the width as needed */
+}
+
+.blog-item::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  /* Hide the thumb */
+}
+
 .heading {
   text-align: center;
   color: $text;
@@ -16,9 +28,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  justify-content: center;
+  gap: 2rem;
   padding: 0 1.5rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
 }
 
 .Blog-btn {
@@ -52,7 +68,7 @@
 .blog-info .desc {
   display: -webkit-box;
   -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical ;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   font-size: .9rem;
   font-weight: 600;

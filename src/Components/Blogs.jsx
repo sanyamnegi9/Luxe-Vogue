@@ -18,6 +18,18 @@ const Blogs = () => {
           desc="Lorem ipsum dolor sit amet consectetur adipisicing elit"
           link="/contact"
         />
+        <BlogCard
+          img={blog1}
+          title="sanfkd asfkdj"
+          desc="Lorem ipsum dolor sit amet consectetur adipisicing elit"
+          link="/contact"
+        />
+        <BlogCard
+          img={blog1}
+          title="sanfkd asfkdj"
+          desc="Lorem ipsum dolor sit amet consectetur adipisicing elit"
+          link="/contact"
+        />
       </div>
       <div className="Blog-btn">
         <button className="btn">View All</button>

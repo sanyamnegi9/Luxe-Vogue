@@ -3,35 +3,58 @@
 
 
 .products-container {
+  background-color: $background-sec;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1.5rem;
   margin: $margin-top 0;
-  padding: 0 1.5rem;
+  padding: 1.5rem;
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
 }
 
+.products-container::-webkit-scrollbar {
+  width: 0.1em;
+  /* Adjust the width as needed */
+}
+
+.products-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  /* Hide the thumb */
+}
+
 .product-card {
-  background-color: $background-sec;
-  width: 250px;
+  background-color: $background;
+  min-width: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: .5rem;
   border-radius: 15px;
   padding: .7rem 0;
+  border: 1px solid $border-color;
+}
+
+.product-img {
+  text-align: center;
+  height: 250px;
+  width: 100%;
+}
+
+.product-img>img {
+  height: 100%;
+  border-radius: 10px;
 }
 
 .product-card .product-info {
   width: 100%;
   text-align: center;
   color: $text;
-  padding: 0 .4rem;
+  padding: 0 .5rem;
 }
 
 .product-info .brand-name {
@@ -49,18 +72,6 @@
   text-transform: capitalize;
 
 }
-
-.product-img {
-  text-align: center;
-  height: 250px;
-  width: 100%;
-}
-
-.product-img>img {
-  height: 100%;
-  border-radius: 10px;
-}
-
 
 .product-card button {
   padding: .5rem 1.5rem;
