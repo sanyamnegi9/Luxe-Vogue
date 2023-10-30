@@ -90,6 +90,7 @@
 
 .drop-container:hover .drop-items-container {
   display: flex;
+  z-index: 2;
 }
 
 

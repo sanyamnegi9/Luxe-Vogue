@@ -10,7 +10,7 @@ const Header = () => {
     <div
       id="carouselExampleRide"
       className="carousel slide mt-1"
-      style={{ zIndex: "-1" }}
+      style={{ zIndex: "1" }}
       data-bs-ride="true"
     >
       <div className="carousel-inner">
