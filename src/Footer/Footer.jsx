@@ -12,8 +12,9 @@ const Footer = () => {
         <div>
           <h3>A Modern day mercantile</h3>
           <p>
-            Thoughtful curiosities for the body & home. Visit us in Boulder,
-            Colorado.
+            Elevate your style with Luxe Vogue's opulent clothing and
+            accessories, redefining luxury fashion with timeless classics and
+            contemporary couture
           </p>
         </div>
         <div>
