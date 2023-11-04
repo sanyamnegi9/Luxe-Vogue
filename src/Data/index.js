@@ -11,6 +11,7 @@ import product10 from "../Assets/images/clothing/product10.jpg";
 import product11 from "../Assets/images/clothing/product11.jpg";
 import product12 from "../Assets/images/clothing/product12.jpg";
 import product13 from "../Assets/images/clothing/product13.jpg";
+
 import product12_1 from "../Assets/images/clothing/product12_1.jpg";
 
 
@@ -35,47 +36,6 @@ import e_product10_1 from "../Assets/images/electronics/electronic_product10_1.j
 
 
 
-export const inTheHome = [
-  {
-    living: [
-      "Shop All",
-      "Art / Mirrors",
-      "Baskets",
-      "Candles",
-      "Incense / Holders",
-      "Lighting",
-      "Objects",
-      "Pillows",
-      "Planters",
-      "Rugs",
-      "Throws",
-    ],
-    kitchen: [
-      "Shop All",
-      "Bar Accessories",
-      "Dishware / Ceramics",
-      "Cleaning Supplies",
-      "Coffee / Tea",
-      "Containers / Jars",
-      "Glassware",
-      "Pitchers / Vases",
-      "Serving",
-      "Textiles",
-    ],
-    "bed / bath": [
-      "Shop All",
-      "Bath Accessories",
-      "Bedding",
-      "Body / Face",
-      "Grooming",
-      "Organization",
-      "Pillows",
-      "Soaps",
-      "Textiles",
-    ],
-    "gift shop": ["Gift Cards", "Stationery", "Gifts Under $100"],
-  },
-];
 
 export const month_names = [
   "January",

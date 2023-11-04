@@ -1,8 +1,9 @@
-import "../Styles/Products.scss";
+import { Link, redirect } from "react-router-dom";
+import "../Styles/ProductComponent.scss";
 const ProductCard = ({ id, img, brand, title, price }) => {
   return (
     <>
-      <div className="product-card" id={id}>
+      <Link className="product-card" id={id} to="..a/products">
         <div className="product-img">
           <img src={img} alt={title} />
         </div>
@@ -15,7 +16,7 @@ const ProductCard = ({ id, img, brand, title, price }) => {
           <button className="cart-btn">Add to Cart</button>
           <button className="buy-btn">Buy Now</button>
         </div>
-      </div>
+      </Link>
     </>
   );
 };

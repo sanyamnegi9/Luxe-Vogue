@@ -27,10 +27,6 @@ const Navbar = () => {
           <Link>IN THE HOME</Link>
           <InTheHome />
         </div>
-        <div className="drop-container">
-          <Link>DESIGNERS</Link>
-          <Designers />
-        </div>
       </div>
       <div className="brand">
         <Link to="/">LUXE VOGUE</Link>
