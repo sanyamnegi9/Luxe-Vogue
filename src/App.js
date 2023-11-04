@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./Styles/App.scss";
-import Navbar from "./Navbar";
-import Footer from './Footer';
+import Navbar from "./Components/Navbar";
+import Footer from './Components/Footer';
 import { Home, About, Contact } from "./Pages";
 
 function App() {

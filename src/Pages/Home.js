@@ -4,6 +4,7 @@ import Header from "../Components/Header";
 import NewArrivals from "../Components/NewArrivals";
 import Products from "../Components/Products";
 import Services from "../Components/Services";
+
 const Home = () => {
   return (
     <>
