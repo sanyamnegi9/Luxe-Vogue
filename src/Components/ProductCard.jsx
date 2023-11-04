@@ -1,7 +1,7 @@
 import "../Styles/Products.scss";
 const ProductCard = ({ id, img, brand, title, price }) => {
   return (
-    <>  
+    <>
       <div className="product-card" id={id}>
         <div className="product-img">
           <img src={img} alt={title} />
@@ -11,7 +11,10 @@ const ProductCard = ({ id, img, brand, title, price }) => {
           <p className="title">{title}</p>
           <p className="price">{`₹ ${price}`}</p>
         </div>
-        <button>Add to Cart</button>
+        <div className="product-btn">
+          <button className="cart-btn">Add to Cart</button>
+          <button className="buy-btn">Buy Now</button>
+        </div>
       </div>
     </>
   );

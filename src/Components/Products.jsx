@@ -1,21 +1,19 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 import "../Styles/Products.scss";
-import product3 from "../Assets/images/product3.jpg";
-
 import { productDetails } from "../Data";
 
 const Products = () => {
   return (
     <>
-      {productDetails.map(({ category_id, category_name, products }) => (
+      {productDetails.slice(0, 2).map(({ category_id, category_name, products }) => (
         <div className="category" id={category_id}>
           <h2>{category_name}</h2>
           <div className="products-container">
-            {products.map(({id, img, brand, name, price}) => (
+            {products.slice(0, 7).map(({id, img, brand, name, price}, index) => (
               <ProductCard
                 id={id}
-                img={product3}
+                img={img}
                 brand={brand}
                 title={name}
                 price={price}
