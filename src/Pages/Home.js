@@ -4,10 +4,12 @@ import Header from "../Components/Header";
 import ProductComponent from "../Components/ProductsSec"
 import NewArrivals from "../Components/NewArrivals";
 import Services from "../Components/Services";
+import Navbar from "../Components/Navbar";
 
 const Home = () => {
   return (
     <>
+      <Navbar/>
       <Header />
       <ProductComponent/>
       <NewArrivals />
