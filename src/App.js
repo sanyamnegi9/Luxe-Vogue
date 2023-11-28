@@ -4,7 +4,8 @@ import Navbar from "./Components/Navbar";
 import Footer from './Components/Footer';
 import { Home, About, Contact } from "./Pages";
 import ProductPage from "./Pages/ProductPage";
-import Products from "./Components/Products";
+import Products from "./Components/ProductsSec/Products";
+
 
 function App() {
   return (

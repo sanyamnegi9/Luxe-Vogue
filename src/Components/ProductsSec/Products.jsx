@@ -1,9 +1,9 @@
 import React from "react";
-import Services from "./Services";
-import "../Styles/Products.scss";
-import { productDetails } from "../Data";
+import Services from "../Services";
+import "../../Styles/ProductPage.scss";
+import { productDetails } from "../../Data";
 import ProductCard from "./ProductCard";
-import product_img from "../Assets/images/clothing/product8.jpg";
+import product_img from "../../Assets/images/clothing/product8.jpg";
 
 const Products = () => {
   return (

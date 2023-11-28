@@ -1,7 +1,7 @@
 import React from "react";
 import ProductCard from "./ProductCard";
-import "../Styles/ProductComponent.scss";
-import { productDetails } from "../Data";
+import "./ProductComponent.scss";
+import { productDetails } from "../../Data";
 import { Link } from "@mui/material";
 
 const ProductComponent = () => {

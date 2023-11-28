@@ -1,8 +1,8 @@
 import React from "react";
-import { month_names } from "../Data";
-import "../Styles/Blogs.scss";
+import { month_names } from "../../Data";
+import "./Blogs.scss";
 import BlogCard from "./BlogCard";
-import blog1 from "../Assets/images/blog1.jpg";
+import blog1 from "../../Assets/images/blog1.jpg";
 
 const Blogs = () => {
   return (

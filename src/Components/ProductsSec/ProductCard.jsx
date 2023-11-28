@@ -1,5 +1,5 @@
 import { Link, redirect } from "react-router-dom";
-import "../Styles/ProductComponent.scss";
+import "./ProductComponent.scss";
 const ProductCard = ({ id, img, brand, title, price }) => {
   return (
     <>
