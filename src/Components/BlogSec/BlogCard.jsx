@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Blogs.scss";
 
-const BlogCard = ({ img, title, desc, link }) => {
+const BlogCard = ({ id, img, title, desc, link }) => {
   return (
     <div className="blog-card">
       <div className="blog-img">
@@ -11,10 +11,9 @@ const BlogCard = ({ img, title, desc, link }) => {
       <div className="blog-info">
         <p className="title">{title}</p>
         <p className="desc">{desc}</p>
+        <Link to={link}>Read more...</Link>
       </div>
-      <Link to={link}>Read more...</Link>
     </div>
-   
   );
 };
 

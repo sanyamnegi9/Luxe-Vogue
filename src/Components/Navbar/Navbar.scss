@@ -13,6 +13,7 @@ nav {
   border-bottom: 1px solid $border-color;
   gap: 2rem;
   z-index: 5;
+  overflow-x: hidden;
 }
 
 .logo {
@@ -90,8 +91,6 @@ nav {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   opacity: 0;
   z-index: 5;
-
-
   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
   opacity: 0;
 }
@@ -99,7 +98,6 @@ nav {
 .drop-container:hover .drop-items-container {
   display: flex;
   z-index: 5;
-
   opacity: 1;
 }
 
@@ -160,11 +158,11 @@ nav {
   background-color: $background-sec;
   position: fixed;
   top: 0;
-  right: -100%;
+  right: -200%;
   height: 100%;
   width: 25rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transition: right 0.3s ease-in-out;
+  transition: right 0.2s ease-in-out;
   z-index: 1000;
 
   &.open {
