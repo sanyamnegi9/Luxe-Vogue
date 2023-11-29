@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import "../Styles/NewArrivals.scss"
+import "../Styles/Components/NewArrivals.scss";
 
 
 const NewArrivals = () => {

@@ -1,8 +1,5 @@
 import React from "react";
-import shipping from "../Assets/icons/free-shipping.png";
-import send from "../Assets/icons/send.png";
-import ret from "../Assets/icons/return.png";
-import "../Styles/Services.scss";
+import "../Styles/Components/Services.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRotateLeft, faTruckFast } from "@fortawesome/free-solid-svg-icons";
 import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";

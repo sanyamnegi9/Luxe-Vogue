@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./Navbar.scss";
 import { Link } from "react-router-dom";
-import Cart from "./Cart";
 import Search from "./Search";
 import DropdownList from "./DropdownList";
+import Cart from "../Cart/Cart";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);

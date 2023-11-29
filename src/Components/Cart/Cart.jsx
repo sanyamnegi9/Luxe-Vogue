@@ -1,7 +1,10 @@
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
-import "./Navbar.scss";
+import "./Cart.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../contexts/CartContext";
+import { useContext } from "react";
+
 
 const Cart = ({ isOpen, onClose }) => {
   return (

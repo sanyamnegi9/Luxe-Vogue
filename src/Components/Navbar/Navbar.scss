@@ -1,5 +1,4 @@
 @import "../../Styles/variables";
-
 nav {
   background: $background-sec;
   height: 4rem;
@@ -13,7 +12,7 @@ nav {
   border-bottom: 1px solid $border-color;
   gap: 2rem;
   z-index: 5;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .logo {
@@ -149,42 +148,6 @@ nav {
     height: fit-content;
   }
 
-}
-
-
-
-/* -----Cart.css------ */
-.cart {
-  background-color: $background-sec;
-  position: fixed;
-  top: 0;
-  right: -200%;
-  height: 100%;
-  width: 25rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transition: right 0.2s ease-in-out;
-  z-index: 1000;
-
-  &.open {
-    right: 0;
-  }
-}
-
-// designing cart
-.cart>.cart-heading {
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid $border-color;
-
-
-  h2 {
-    color: $text;
-    text-transform: uppercase;
-    font-size: 1.3rem;
-  }
 }
 
 /* overlay to fade the rest of the screen */

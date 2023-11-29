@@ -1,9 +1,7 @@
 import React from "react";
-import carousel1 from "../Assets/images/carousel1.jpg";
-import carousel2 from "../Assets/images/carousel2.jpg";
-import carousel3 from "../Assets/images/carousel3.jpg";
-import carousel4 from "../Assets/images/carousel4.jpg";
+import "../Styles/Components/Header.scss";
 import { Link } from "react-router-dom";
+import { carouselData } from "../Data";
 
 const Header = () => {
   return (
@@ -14,26 +12,13 @@ const Header = () => {
       data-bs-ride="true"
     >
       <div className="carousel-inner">
-        <div className="carousel-item active">
-          <Link>
-            <img src={carousel1} className="d-block w-100" alt="..." />
-          </Link>
-        </div>
-        <div className="carousel-item">
-          <Link>
-            <img src={carousel2} className="d-block w-100" alt="..." />
-          </Link>
-        </div>
-        <div className="carousel-item ">
-          <Link>
-            <img src={carousel3} className="d-block w-100" alt="..." />
-          </Link>
-        </div>
-        <div className="carousel-item ">
-          <Link>
-            <img src={carousel4} className="d-block w-100" alt="..." />
-          </Link>
-        </div>
+        {carouselData.map(({ id, img }) => (
+          <div key={id} className={`carousel-item ${id===1?"active":""}`}>
+            <Link>
+              <img src={img} className="d-block w-100" alt="..." />
+            </Link>
+          </div>
+        ))}
       </div>
 
       <button

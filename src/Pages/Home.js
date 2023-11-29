@@ -1,19 +1,15 @@
-import Blogs from "../Components/BlogSec";
-import DisplayCategory from "../Components/DisplayCategory";
+import Blogs from "../Components/Blog";
 import Header from "../Components/Header";
-import ProductComponent from "../Components/ProductsSec"
 import NewArrivals from "../Components/NewArrivals";
 import Services from "../Components/Services";
-import Navbar from "../Components/Navbar";
+import Product from "../Components/Product";
 
 const Home = () => {
   return (
     <>
-      <Navbar/>
       <Header />
-      <ProductComponent/>
+      <Product/>
       <NewArrivals />
-      <DisplayCategory />
       <Blogs />
       <Services />
     </>

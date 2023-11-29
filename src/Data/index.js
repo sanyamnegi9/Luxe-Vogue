@@ -1,4 +1,3 @@
-import product1 from "../Assets/images/clothing/product1.jpg";
 import product2 from "../Assets/images/clothing/product2.jpg";
 import product3 from "../Assets/images/clothing/product3.jpg";
 import product4 from "../Assets/images/clothing/product4.jpg";
@@ -11,10 +10,6 @@ import product10 from "../Assets/images/clothing/product10.jpg";
 import product11 from "../Assets/images/clothing/product11.jpg";
 import product12 from "../Assets/images/clothing/product12.jpg";
 import product13 from "../Assets/images/clothing/product13.jpg";
-
-import product12_1 from "../Assets/images/clothing/product12_1.jpg";
-
-
 import e_product1 from "../Assets/images/electronics/electronic_product1.jpg";
 import e_product2 from "../Assets/images/electronics/electronic_product2.jpg";
 import e_product3 from "../Assets/images/electronics/electronic_product3.jpg";
@@ -26,19 +21,17 @@ import e_product8 from "../Assets/images/electronics/electronic_product8.jpg";
 import e_product9 from "../Assets/images/electronics/electronic_product9.jpg";
 import e_product10 from "../Assets/images/electronics/electronic_product10.jpg";
 
-import e_product1_1 from "../Assets/images/electronics/electronic_product1_1.jpg";
-import e_product5_1 from "../Assets/images/electronics/electronic_product5_1.jpg";
-import e_product6_1 from "../Assets/images/electronics/electronic_product6_1.jpg";
-import e_product7_1 from "../Assets/images/electronics/electronic_product7_1.jpg";
-import e_product8_1 from "../Assets/images/electronics/electronic_product8_1.jpg";
-import e_product9_1 from "../Assets/images/electronics/electronic_product9_1.jpg";
-import e_product10_1 from "../Assets/images/electronics/electronic_product10_1.jpg";
-
 
 // blog images
 import blogIng1 from "../Assets/images/blogs/blog1.jpg";
 import blogIng2 from "../Assets/images/blogs/blog2.jpg";
 import blogIng3 from "../Assets/images/blogs/blog3.jpg";
+
+// header carousel images
+import carouselImg1 from "../Assets/images/carousel/carousel1.jpg";
+import carouselImg2 from "../Assets/images/carousel/carousel2.jpg";
+import carouselImg3 from "../Assets/images/carousel/carousel3.jpg";
+import carouselImg4 from "../Assets/images/carousel/carousel4.jpg";
 
 
 
@@ -55,6 +48,13 @@ export const month_names = [
   "October",
   "November",
   "December",
+];
+
+export const carouselData = [
+  { id: 1, img: carouselImg1 },
+  { id: 2, img: carouselImg2 },
+  { id: 3, img: carouselImg3 },
+  { id: 4, img: carouselImg4 },
 ];
 
 export const productDetails = [

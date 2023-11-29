@@ -4,7 +4,7 @@ import "./Blogs.scss";
 
 const BlogCard = ({ id, img, title, desc, link }) => {
   return (
-    <div className="blog-card">
+    <div key={id} className="blog-card">
       <div className="blog-img">
         <img src={img} alt="" />
       </div>
