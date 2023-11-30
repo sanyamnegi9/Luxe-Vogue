@@ -2,13 +2,19 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import "./Product.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../contexts/CartContext";
+import { ProductContext } from "../../contexts/ProductContext";
+import { useContext } from "react";
 
-const ProductCard = ({ id, img, title, price, category }) => {
+
+const ProductCard = ({product}) => {
+  const { id, image, title, price } = product
+  const {addToCart, setAddToCart} = useContext(CartContext);
   return (
-    <div className="product-card" key={id}>
+    <Link to={`/product/${id}`} className="product-card" key={id}>
       <div className="img-container">
-        <img src={img} alt={title} />
-        <Link>
+        <img src={image} alt={title} />
+        <Link onClick={() => addToCart(product, id)}>
           <FontAwesomeIcon icon={faPlus} />
         </Link>
       </div>
@@ -16,7 +22,7 @@ const ProductCard = ({ id, img, title, price, category }) => {
         <h4 className="product-title">{title}</h4>
         <p className="product-price">{`$ ${price}`}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 

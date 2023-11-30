@@ -21,7 +21,7 @@ const Search = ({ isOpen, onClose }) => {
     <div className={`search ${isOpen ? "open" : ""}`}>
       <div className="search-container">
         <Link onClick={handleSearch}>
-          <FontAwesomeIcon icon={faMagnifyingGlass} size="2xl" />
+          <FontAwesomeIcon icon={faMagnifyingGlass} size="xl" />
         </Link>
         <input
           type="text"
@@ -31,7 +31,7 @@ const Search = ({ isOpen, onClose }) => {
         />
       </div>
       <Link onClick={onClose}>
-        <FontAwesomeIcon icon={faXmark} size="2xl" />
+        <FontAwesomeIcon icon={faXmark} size="xl" />
       </Link>
     </div>
   );

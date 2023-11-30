@@ -12,12 +12,10 @@ const Blogs = () => {
         <p>{month_names[new Date().getMonth()]}</p>
       </div>
       <div className="blog-items-container">
-        {blogData.map(({ id, img, title, blogContent }) => (
+        {blogData.map((blog) => (
           <BlogCard
-            id={id}
-            img={img}
-            title={title}
-            desc={blogContent}
+            blog={blog}
+            key={blog.id}
             link="/blog-page"
           />
         ))}

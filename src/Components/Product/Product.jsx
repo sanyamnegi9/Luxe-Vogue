@@ -14,17 +14,10 @@ const Products = () => {
     );
   });
 
-  console.log(Products);
   return (
     <div className="products-container">
-      {filteredProducts.slice(0, 5).map(({id, image, title, price, category}) => (
-        <ProductCard
-          id={id}
-          img={image}
-          title={title}
-          price={price}
-          category={category}
-        />
+      {filteredProducts.map((product) => (
+        <ProductCard product={product} key={product.id} />
       ))}
     </div>
   );

@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Blogs.scss";
 
-const BlogCard = ({ id, img, title, desc, link }) => {
+const BlogCard = ({blog}) => {
+  const { id, img, title, desc, link } = blog;
   return (
     <div key={id} className="blog-card">
       <div className="blog-img">
