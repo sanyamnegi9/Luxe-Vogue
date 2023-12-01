@@ -7,7 +7,7 @@ import { CartContext } from "../../contexts/CartContext";
 import CartItem from "./CartItem";
 
 const Cart = ({ isOpen, onClose }) => {
-  const { cart, ClearCart, total, itemAmount } = useContext(CartContext);
+  const { cart, ClearCart, total } = useContext(CartContext);
   return (
     <div className={`cart ${isOpen ? "open" : ""}`}>
       <div className="cart-heading">
@@ -24,8 +24,12 @@ const Cart = ({ isOpen, onClose }) => {
       <div className="clear-cart">
         <div>{`Total: $ ${parseFloat(total).toFixed(2)}`}</div>
         <Link onClick={ClearCart}>
-          <FontAwesomeIcon icon={faTrash} size="lg"/>
+          <FontAwesomeIcon icon={faTrash} size="lg" />
         </Link>
+      </div>
+      <div className="cart-btn">
+        <Link to="/cart" className="checkout-btn">View Cart</Link>
+        <Link to="/checkout" className="checkout-btn">Checkout</Link>
       </div>
     </div>
   );

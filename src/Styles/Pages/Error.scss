@@ -1,0 +1,52 @@
+@import "../variables";
+
+
+.error {
+  height: 89vh;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  h2 {
+    color: $text;
+    font-size: 10rem;
+  }
+
+  h3 {
+    color: $sec-text;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: $text;
+    width: 100%;
+    max-width: 45rem;
+    font-size: 1.4rem;
+    font-style: italic;
+    text-align: center;
+  }
+
+  a {
+    color: $text;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    padding: .6rem 3rem;
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    border: 2px solid $text;
+  }
+
+}
+
+@media (max-width: 540px) {
+  .error {
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}

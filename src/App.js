@@ -1,21 +1,24 @@
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import { Home } from "./Pages";
-import ProductDetails from "./Pages/ProductDetails";
-import Test from "./Pages/Test";
+import { Home, Checkout, ProductDetails, Test, Error } from "./Pages";
+
+import CartPage from "./Pages/CartPage/";
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/test" element={<Test />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 
