@@ -1,8 +1,7 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./Navbar.scss";
 import { Link } from "react-router-dom";
 import Search from "./Search";
-import DropdownList from "./DropdownList";
 import Cart from "../Cart/Cart";
 import {
   faBars,
@@ -12,9 +11,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CartContext } from "../../contexts/CartContext";
+import { Category } from "@mui/icons-material";
 
 const Navbar = () => {
   const { itemAmount } = useContext(CartContext);
+
+  const [productCategories, setProductCategories] = useState([]);
 
   const [showCart, setshowCart] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -26,21 +28,26 @@ const Navbar = () => {
     setSearchOpen(false);
   };
 
+  // fetch products category's
+  useEffect(() => {
+    const fetchProductCategory = async () => {
+      const response = await fetch(
+        "https://fakestoreapi.com/products/categories"
+      );
+      const data = await response.json();
+      setProductCategories(data);
+    };
+    fetchProductCategory();
+  });
+
   return (
     <nav className={`${searchOpen ? "search-active" : ""}`}>
       <div className="nav-left">
-        <div className="drop-container">
-          <Link to="/in-the-home">in the home</Link>
-          <DropdownList />
-        </div>
-        <div className="drop-container">
-          <Link to="/in-the-body">in the body</Link>
-          <DropdownList />
-        </div>
-        <div className="drop-container">
-          <Link to="/designers">designers</Link>
-          <DropdownList />
-        </div>
+        {productCategories.slice(0, 3).map((category) => (
+          <div className="drop-container">
+            <Link to={`products/${category}`}>{category}</Link>
+          </div>
+        ))}
       </div>
       <div className="mobile-nav-left">
         <Link>
@@ -71,7 +78,6 @@ const Navbar = () => {
           <div>{itemAmount}</div>
         </Link>
       </div>
-      <DropdownList />
       <Search isOpen={searchOpen} onClose={closeMenuAndSearch} />
       <Cart isOpen={showCart} onClose={closeMenuAndSearch} />
 

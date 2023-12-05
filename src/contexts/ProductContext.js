@@ -5,8 +5,6 @@ import React, { createContext, useState, useEffect } from "react";
 export const ProductContext = createContext();
 
 const ProductProvider = ({ children }) => {
-
-  // products state
   const [products, setProducts] = useState([]);
 
   // fetch products
@@ -18,6 +16,8 @@ const ProductProvider = ({ children }) => {
     };
     fetchProducts();
   }, []);
+
+
   return (
     <ProductContext.Provider value={{ products }}>
       {children}

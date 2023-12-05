@@ -9,7 +9,8 @@ import {
   Error,
   Products,
   Login,
-  Dashboard
+  Dashboard,
+  ProductCategory
 } from "./Pages";
 import CartPage from "./Pages/CartPage/";
 import ProtectedRoute from "./Components/ProtectedRoute";
@@ -23,6 +24,7 @@ function App() {
 
           <Route path="products">
             <Route index element={<Products />} />
+            <Route path=":productCategory" element={<ProductCategory/>}/>
             <Route
               path=":productId/:productTitle"
               element={<ProductDetails />}
