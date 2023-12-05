@@ -3,15 +3,13 @@ import "./Product.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../contexts/CartContext";
-import { ProductContext } from "../../contexts/ProductContext";
 import { useContext } from "react";
 
-
-const ProductCard = ({product}) => {
-  const { id, image, title, price } = product
-  const {addToCart, setAddToCart} = useContext(CartContext);
+const ProductCard = ({ product }) => {
+  const { id, image, title, price } = product;
+  const { addToCart, setAddToCart } = useContext(CartContext);
   return (
-    <Link to={`/product/${id}`} className="product-card" key={id}>
+    <Link to={`/products/${id}/${title}`} className="product-card" key={id}>
       <div className="img-container">
         <img src={image} alt={title} />
         <Link onClick={() => addToCart(product, id)}>

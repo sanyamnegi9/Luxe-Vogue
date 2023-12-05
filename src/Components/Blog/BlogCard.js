@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Blogs.scss";
 
 const BlogCard = ({blog}) => {
-  const { id, img, title, desc, link } = blog;
+  const { id, img, title, desc } = blog;
   return (
     <div key={id} className="blog-card">
       <div className="blog-img">
@@ -12,7 +12,7 @@ const BlogCard = ({blog}) => {
       <div className="blog-info">
         <p className="title">{title}</p>
         <p className="desc">{desc}</p>
-        <Link to={link}>Read more...</Link>
+        <Link to={`/blog/${id}/${title}`}>Read more...</Link>
       </div>
     </div>
   );

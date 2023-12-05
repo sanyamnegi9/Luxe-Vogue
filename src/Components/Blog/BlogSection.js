@@ -1,10 +1,9 @@
 import React from "react";
-import { month_names } from "../../Data";
+import { blogData, month_names } from "../../Data";
 import "./Blogs.scss";
 import BlogCard from "./BlogCard";
-import { blogData } from "../../Data";
 
-const Blogs = () => {
+const BlogSection = () => {
   return (
     <div className="blogs-container">
       <div className="heading">
@@ -25,4 +24,4 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default BlogSection;
