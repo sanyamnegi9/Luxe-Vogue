@@ -8,8 +8,11 @@ import {
   Test,
   Error,
   Products,
+  Login,
+  Dashboard
 } from "./Pages";
 import CartPage from "./Pages/CartPage/";
+import ProtectedRoute from "./Components/ProtectedRoute";
 
 function App() {
   return (
@@ -17,15 +20,28 @@ function App() {
       <Routes>
         <Route path="/" element={<SharedHomeLayout />}>
           <Route index element={<Home />} />
+
           <Route path="products">
             <Route index element={<Products />} />
-            <Route path=":productId/:productTitle" element={<ProductDetails />} />
+            <Route
+              path=":productId/:productTitle"
+              element={<ProductDetails />}
+            />
           </Route>
           <Route path="blog/:blogId/:blogTitle" element={<BlogDetails />} />
           <Route path="test" element={<Test />} />
         </Route>
-        <Route path="cart" element={<SharedLayout />}>
-          <Route index element={<CartPage />} />
+        <Route path="/" element={<SharedLayout />}>
+          <Route path="cart" element={<CartPage />} />
+          <Route path="login" element={<Login />} />
+          <Route
+            path="dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
         </Route>
         <Route path="checkout" element={<Checkout />} />
         <Route path="*" element={<Error />} />

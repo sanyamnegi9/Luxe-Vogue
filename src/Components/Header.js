@@ -5,7 +5,7 @@ import { carouselData } from "../Data";
 
 const Header = () => {
   return (
-    <div
+    <section
       id="carouselExampleRide"
       className="carousel slide mt-1"
       style={{ zIndex: "1" }}
@@ -39,7 +39,7 @@ const Header = () => {
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Next</span>
       </button>
-    </div>
+    </section>
   );
 };
 
