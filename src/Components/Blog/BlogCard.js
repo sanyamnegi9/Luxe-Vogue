@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import "./Blogs.scss";
 
 const BlogCard = ({blog}) => {
-  const { id, img, title, desc } = blog;
+  const { id, image, title, desc } = blog;
   return (
     <div key={id} className="blog-card">
       <div className="blog-img">
-        <img src={img} alt="" />
+        <img src={image} alt="" />
       </div>
       <div className="blog-info">
         <p className="title">{title}</p>
