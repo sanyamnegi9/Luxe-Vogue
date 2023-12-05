@@ -7,9 +7,6 @@ import blogIng3 from "../Assets/images/blogs/blog3.jpg";
 import carouselImg1 from "../Assets/images/carousel/carousel1.jpg";
 import carouselImg2 from "../Assets/images/carousel/carousel2.jpg";
 import carouselImg3 from "../Assets/images/carousel/carousel3.jpg";
-import carouselImg4 from "../Assets/images/carousel/carousel4.jpg";
-
-
 
 export const month_names = [
   "January",
@@ -27,12 +24,10 @@ export const month_names = [
 ];
 
 export const carouselData = [
-  { id: 1, img: carouselImg1 },
-  { id: 2, img: carouselImg2 },
-  { id: 3, img: carouselImg3 },
-  { id: 4, img: carouselImg4 },
+  { id: 1, image: carouselImg2 },
+  { id: 2, image: carouselImg3 },
+  { id: 3, image: carouselImg1 },
 ];
-
 
 export const blogData = [
   {
