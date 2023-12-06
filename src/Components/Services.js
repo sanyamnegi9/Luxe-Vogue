@@ -1,5 +1,4 @@
 import React from "react";
-import "../Styles/Components/Services.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRotateLeft, faTruckFast } from "@fortawesome/free-solid-svg-icons";
 import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";

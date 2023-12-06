@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Blogs.scss";
+
 
 const BlogCard = ({blog}) => {
   const { id, image, title, desc } = blog;

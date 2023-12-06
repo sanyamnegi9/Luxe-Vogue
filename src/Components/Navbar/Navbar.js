@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-import "./Navbar.scss";
 import { Link } from "react-router-dom";
 import Search from "./Search";
 import Cart from "../Cart/Cart";

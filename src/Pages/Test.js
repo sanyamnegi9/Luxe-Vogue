@@ -1,8 +1,12 @@
-import Carousel from "../Components/Carousel";
 import React from "react";
+import ProductSlider from "../Components/Product/ProductSlider";
 
 const Test = () => {
-  return <section></section>;
+  return (
+    <section>
+      <ProductSlider heading="men's clothing" category="men's clothing" />
+    </section>
+  );
 };
 
 export default Test;

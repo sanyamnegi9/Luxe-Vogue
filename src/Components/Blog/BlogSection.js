@@ -1,6 +1,5 @@
 import React from "react";
 import { blogData, month_names } from "../../Data";
-import "./Blogs.scss";
 import BlogCard from "./BlogCard";
 
 const BlogSection = () => {
