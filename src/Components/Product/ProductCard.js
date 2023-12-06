@@ -1,5 +1,4 @@
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import "./Product.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../contexts/CartContext";

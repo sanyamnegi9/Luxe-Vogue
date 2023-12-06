@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Navbar.scss";
 import { Link } from "react-router-dom";
 import { faMagnifyingGlass, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

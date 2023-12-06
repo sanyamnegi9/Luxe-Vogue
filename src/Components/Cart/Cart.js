@@ -1,5 +1,4 @@
 import { faTrash, faXmark } from "@fortawesome/free-solid-svg-icons";
-import "./Cart.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
