@@ -2,11 +2,17 @@ import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { ProductContext } from "../contexts/ProductContext";
 import ProductCard from "../Components/Product/ProductCard";
+import Loading from "../Components/Loading";
 
 const ProductCategory = () => {
   // get the product id from the url
   const { productCategory } = useParams();
   const { products } = useContext(ProductContext);
+
+
+  if (!productCategory) {
+    return <Loading />;
+  }
 
   // get only men's & women's clothing category
   const filteredProducts = products.filter((item) => {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -11,59 +11,85 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!emailPattern.test(email)) {
+      setEmailError("Please enter a valid email address.");
+      console.error("enter valid email");
+      return;
+    }
+
+    console.log(email);
+  };
   return (
-    <div className="footer">
-      <div className="footer-content">
-        <div className="footer-section">
-          <h3>A Modern day mercantile</h3>
-          <p>
+    <footer className="relative bottom-0 flex flex-col w-full px-8 pb-4 pt-12 bg-background-sec gap-8">
+      <div className="flex flex-col sm:flex-row gap-8 lg:gap-6 flex-wrap justify-between">
+        <div className="w-full sm:max-w-[30rem]">
+          <h3 className="mb-4">A Modern day mercantile</h3>
+          <p className="text-[.85rem]">
             Elevate your style with Luxe Vogue's opulent clothing and
             accessories, redefining luxury fashion with timeless classics and
-            contemporary couture
+            contemporary couture.
           </p>
         </div>
-        <div className="footer-section">
-          <h3>COMPANY</h3>
-          <Link>Visit Us</Link>
-          <Link>About Us</Link>
-          <Link>Journal</Link>
+        <div className="w-full sm:w-fit flex flex-col capitalize">
+          <h3 className="mb-4">Company</h3>
+          <Link className="mb-3 footer-links">Visit us</Link>
+          <Link className=" footer-links">about us</Link>
         </div>
-        <div className="footer-section">
-          <h3>HELP</h3>
-          <Link>Customer Service</Link>
-          <Link>Return Policy</Link>
-          <Link>Gift Cards</Link>
-          <Link>Terms & Conditions</Link>
+        <div className="w-full sm:w-fit  flex flex-col capitalize">
+          <h3 className="mb-4">help</h3>
+          <Link className="mb-3 footer-links">Customer service</Link>
+          <Link className="mb-3 footer-links">return policy</Link>
+          <Link className="mb-3 footer-links">shipping</Link>
+          <Link className="footer-links">terms & conditions</Link>
         </div>
-        <div className="footer-section newsletter">
-          <h3>NEWSLETTER</h3>
-          <p>We send only the best mail.</p>
-          <input
-            type="email"
-            className="email-input"
-            placeholder="Email"
-            required
-          />
-          <button className="btn" type="submit">
-            Subscribe
-          </button>
+        <div className="w-full sm:w-[20rem] flex flex-col  gap-4">
+          <h3>Newsletter</h3>
+          <p className="text-[.85rem]">Subscribe to our Newsletter.</p>
+          <form onClick={handleSubmit}>
+            <div className="input-box">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  setEmailError("");
+                }}
+                className="input w-full"
+                required
+                pattern={emailPattern}
+              />
+              <label htmlFor="" id="email" className="label">
+                Email
+              </label>
+            </div>
+            <button className="btn primary-btn w-fit max-w-[10rem] px-6 mt-3">
+              Subscribe
+            </button>
+          </form>
         </div>
       </div>
-      <div className="social-icons">
-        <Link>
-          <FontAwesomeIcon icon={faFacebook} size="xl" />
-        </Link>
 
-        <Link>
-          <FontAwesomeIcon icon={faInstagram} size="xl" />
-        </Link>
-
-        <Link>
-          <FontAwesomeIcon icon={faTwitter} size="xl" />
+      {/* social icons */}
+      <div>
+        <Link className="flex gap-4 text-2xl text-sec-text ">
+          <FontAwesomeIcon icon={faFacebook} className="hover:text-text" />
+          <FontAwesomeIcon icon={faInstagram} className="hover:text-text" />
+          <FontAwesomeIcon icon={faTwitter} className="hover:text-text" />
         </Link>
       </div>
-      <div className="copyright">&copy; 2023 Luxe Vogue</div>
-    </div>
+
+      {/* copyright */}
+      <div className="text-[.8rem] uppercase">
+        &copy; {new Date().getFullYear()} Luxe Vogue. All rights reserved.
+      </div>
+    </footer>
   );
 };
 

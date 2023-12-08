@@ -10,7 +10,7 @@ import {
   Products,
   Login,
   Dashboard,
-  ProductCategory
+  ProductCategory,
 } from "./Pages";
 import CartPage from "./Pages/CartPage/";
 import ProtectedRoute from "./Components/ProtectedRoute";
@@ -24,14 +24,13 @@ function App() {
 
           <Route path="products">
             <Route index element={<Products />} />
-            <Route path=":productCategory" element={<ProductCategory/>}/>
+            <Route path=":productCategory" element={<ProductCategory />} />
             <Route
               path=":productId/:productTitle"
               element={<ProductDetails />}
             />
           </Route>
           <Route path="blog/:blogId/:blogTitle" element={<BlogDetails />} />
-          <Route path="test" element={<Test />} />
         </Route>
         <Route path="/" element={<SharedLayout />}>
           <Route path="cart" element={<CartPage />} />
@@ -46,6 +45,7 @@ function App() {
           />
         </Route>
         <Route path="checkout" element={<Checkout />} />
+        <Route path="test" element={<Test />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
