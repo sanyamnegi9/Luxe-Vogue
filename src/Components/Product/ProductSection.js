@@ -12,11 +12,9 @@ const ProductSection = ({ heading, category }) => {
   });
 
   return (
-    <section className="products-section">
-      <div className="heading">
+    <section className="flex flex-col items-center gap-4">
         <h2>{heading}</h2>
-      </div>
-      <div className="blog-items-container">
+      <div className="flex gap-4 flex-wrap">
         {filteredProducts.map((product) => (
           <ProductCard product={product} key={product.id} />
         ))}

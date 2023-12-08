@@ -31,33 +31,16 @@ export const carouselData = [
 
 export const blogData = [
   {
-    id: 1,
-    title: "The Culinary Delights of Italy",
-    image: blogIng1,
-    blogContent: `
-      Italy, a country known for its rich culinary traditions, offers a diverse and flavorful journey for food enthusiasts. From the pasta dishes of Rome to the seafood delights of the Amalfi Coast, each region boasts unique specialties that reflect its culture and history.
-
-      In this blog, we will delve into the culinary delights of Italy, exploring the origins of iconic dishes, the significance of local ingredients, and the passion that goes into crafting each meal. Get ready for a virtual tour of Italian kitchens and markets as we uncover the secrets behind the delicious flavors that have made Italian cuisine a global favorite.
-    `,
-  },
-  {
     id: 2,
     title: "A Road Trip Through the Amalfi Coast",
     image: blogIng2,
-    blogContent: `
-      The Amalfi Coast, with its picturesque landscapes and charming villages, is a dream destination for travel enthusiasts. Join us on an exhilarating road trip along the winding coastal roads, where every turn reveals breathtaking views of the Mediterranean Sea and the colorful houses perched on cliffs.
-
-      This travelogue will take you through the hidden gems of the Amalfi Coast, from the historic town of Amalfi to the glamorous Positano. We'll share our experiences, recommend must-visit spots, and provide tips for making the most of your journey. Pack your bags and get ready for an adventure along one of Italy's most stunning coastlines.
-    `,
+    content: `React is a popular JavaScript library for building user interfaces. Developed and maintained by Facebook, React has gained widespread adoption in the web development community due to its declarative and efficient approach to building UI components. One of the key features of React is its use of a virtual DOM, which allows for efficient updates to the user interface. Instead of updating the entire DOM when data changes, React calculates the minimal number of updates required and applies them to the virtual DOM, resulting in improved performance. 
+    React follows a component-based architecture, where the UI is broken down into reusable and independent components. Each component manages its state, and changes in the state trigger re-rendering of the component. JSX, a syntax extension for JavaScript, is used in React to describe what the UI should look like. JSX makes it easier to visualize and write UI components, as it closely resembles HTML. 
+    Babel, a JavaScript compiler, is commonly used to transform JSX into standard JavaScript that browsers can understand. React also supports a unidirectional data flow, making it easier to understand and debug the application's state changes. Parent components can pass down data to child components through props, and child components can communicate with parent components through callbacks. 
+    In addition to its core library, React has a thriving ecosystem of third-party libraries and tools. React Router is widely used for handling navigation in React applications, while Redux provides a predictable state container for managing application state. Overall, React has become a go-to choice for many developers building modern and interactive user interfaces. Its focus on simplicity performance, and reusability has made it a powerful tool for front-end development.`,
+    author: "John Doe",
+    date: "2023-01-01",
+    tags: ["React", "JavaScript", "Frontend"],
   },
-  {
-    id: 3,
-    title: "DIY Pizza Making: A Fun Family Activity",
-    image: blogIng3,
-    blogContent: `
-      Gather your family for a delightful culinary experience as we explore the art of DIY pizza making. In this blog, we'll guide you through the process of creating the perfect pizza from scratch – from preparing the dough to selecting fresh toppings that cater to everyone's taste.
-
-      Learn tips and tricks for achieving a crispy crust, flavorful sauce, and the ideal cheese melt. Whether you're a pizza enthusiast or a novice in the kitchen, our step-by-step guide will make the pizza-making process enjoyable for all ages. Get ready to unleash your inner chef and savor the satisfaction of homemade pizza perfection!
-    `,
-  },
+  
 ];
