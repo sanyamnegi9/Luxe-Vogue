@@ -1,19 +1,18 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { SharedHomeLayout, SharedLayout } from "./Components/SharedLayouts";
+import ProtectedRoute from "./Components/ProtectedRoute";
 import {
   BlogDetails,
   Home,
   Checkout,
   ProductDetails,
-  Test,
   Error,
   Products,
   Login,
   Dashboard,
   ProductCategory,
+  Cart,
 } from "./Pages";
-import CartPage from "./Pages/CartPage/";
-import ProtectedRoute from "./Components/ProtectedRoute";
 
 function App() {
   return (
@@ -33,7 +32,7 @@ function App() {
           <Route path="blog/:blogId/:blogTitle" element={<BlogDetails />} />
         </Route>
         <Route path="/" element={<SharedLayout />}>
-          <Route path="cart" element={<CartPage />} />
+          <Route path="cart" element={<Cart />} />
           <Route path="login" element={<Login />} />
           <Route
             path="dashboard"
@@ -44,7 +43,6 @@ function App() {
             }
           />
         </Route>
-        <Route path="test" element={<Test />} />
         <Route path="checkout" element={<Checkout />} />
         <Route path="*" element={<Error />} />
       </Routes>
