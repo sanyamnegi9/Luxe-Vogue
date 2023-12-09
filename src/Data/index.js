@@ -2,9 +2,9 @@
 import blogIng2 from "../Assets/images/blogs/blog2.jpg";
 
 // header carousel images
-import carouselImg1 from "../Assets/carousel/carousel1.jpg";
-import carouselImg2 from "../Assets/carousel/carousel2.jpg";
-import carouselImg3 from "../Assets/carousel/carousel3.jpg";
+import carouselImg1 from "../Assets/images/carousel/carousel1.jpg";
+import carouselImg2 from "../Assets/images/carousel/carousel2.jpg";
+import carouselImg3 from "../Assets/images/carousel/carousel3.jpg";
 
 export const month_names = [
   "January",
