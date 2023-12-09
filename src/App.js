@@ -44,8 +44,8 @@ function App() {
             }
           />
         </Route>
-        <Route path="checkout" element={<Checkout />} />
         <Route path="test" element={<Test />} />
+        <Route path="checkout" element={<Checkout />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
