@@ -1,5 +1,5 @@
 // blog images
-import blogIng2 from "../Assets/blogs/blog2.jpg";
+import blogIng2 from "../Assets/images/blogs/blog2.jpg";
 
 // header carousel images
 import carouselImg1 from "../Assets/carousel/carousel1.jpg";

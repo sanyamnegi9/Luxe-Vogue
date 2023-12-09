@@ -10,7 +10,6 @@ import {
   Products,
   Login,
   Dashboard,
-  ProductCategory,
   Cart,
 } from "./Pages";
 
@@ -23,12 +22,12 @@ function App() {
 
           <Route path="products">
             <Route index element={<Products />} />
-            <Route path=":productCategory" element={<ProductCategory />} />
             <Route
               path=":productId/:productTitle"
               element={<ProductDetails />}
             />
           </Route>
+          <Route path=":productCategory" element={<Products />} />
           <Route path="blog/:blogId/:blogTitle" element={<BlogDetails />} />
         </Route>
         <Route path="/" element={<SharedLayout />}>

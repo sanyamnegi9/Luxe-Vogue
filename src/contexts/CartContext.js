@@ -107,6 +107,7 @@ const CartProvider = ({ children }) => {
         increaseAmount,
         decreaseAmount,
         itemAmount,
+        setItemAmount,
         total
       }}
     >

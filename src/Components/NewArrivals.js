@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import image from "../Assets/headerImg.jpg";
+import image from "../Assets/images/headerImg.jpg";
 
 const NewArrivals = () => {
   return (

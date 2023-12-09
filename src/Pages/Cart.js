@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
 import { Link } from "react-router-dom";
-import CartItemCard from '../Components/CartItemCard';
+import CartItemCard from "../Components/CartItemCard";
 
 const Cart = () => {
   const { cart, ClearCart, total, itemAmount } = useContext(CartContext);
@@ -23,6 +23,12 @@ const Cart = () => {
           </p>
           <Link className="btn primary-btn w-full px-2 sm:text-[.8rem]">
             Place order
+          </Link>
+          <Link
+            className="btn primary-btn w-full px-2 sm:text-[.8rem] mt-3"
+            onClick={() => ClearCart()}
+          >
+            Clear Cart
           </Link>
         </div>
       </div>
