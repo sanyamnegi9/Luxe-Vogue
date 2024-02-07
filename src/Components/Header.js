@@ -1,7 +1,7 @@
 import React from "react";
 
-import headerImg from "../Assets/images/headerImg.jpg";
-import headerVideo from "../Assets/videos/headerVideo.mp4";
+import headerImg from "../assets/images/headerImg.jpg";
+import headerVideo from "../assets/videos/headerVideo.mp4";
 import { Link } from "react-router-dom";
 
 const Header = () => {

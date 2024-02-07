@@ -15,37 +15,37 @@ import {
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<SharedHomeLayout />}>
-          <Route index element={<Home />} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<SharedHomeLayout />}>
+            <Route index element={<Home />} />
 
-          <Route path="products">
-            <Route index element={<Products />} />
+            <Route path="products">
+              <Route index element={<Products />} />
+              <Route
+                path=":productId/:productTitle"
+                element={<ProductDetails />}
+              />
+            </Route>
+            <Route path=":productCategory" element={<Products />} />
+            <Route path="blog/:blogId/:blogTitle" element={<BlogDetails />} />
+          </Route>
+          <Route path="/" element={<SharedLayout />}>
+            <Route path="cart" element={<Cart />} />
+            <Route path="login" element={<Login />} />
             <Route
-              path=":productId/:productTitle"
-              element={<ProductDetails />}
+              path="dashboard"
+              element={
+                <ProtectedRoute>
+                  <Dashboard />
+                </ProtectedRoute>
+              }
             />
           </Route>
-          <Route path=":productCategory" element={<Products />} />
-          <Route path="blog/:blogId/:blogTitle" element={<BlogDetails />} />
-        </Route>
-        <Route path="/" element={<SharedLayout />}>
-          <Route path="cart" element={<Cart />} />
-          <Route path="login" element={<Login />} />
-          <Route
-            path="dashboard"
-            element={
-              <ProtectedRoute>
-                <Dashboard />
-              </ProtectedRoute>
-            }
-          />
-        </Route>
-        <Route path="checkout" element={<Checkout />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
-    </BrowserRouter>
+          <Route path="checkout" element={<Checkout />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </BrowserRouter>
   );
 }
 
