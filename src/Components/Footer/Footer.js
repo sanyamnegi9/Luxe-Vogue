@@ -39,15 +39,21 @@ const Footer = () => {
         </div>
         <div className="w-full sm:w-fit flex flex-col capitalize">
           <h3 className="mb-4">Company</h3>
-          <Link className="mb-3 footer-links">Visit us</Link>
-          <Link className=" footer-links">about us</Link>
+          <Link className="mb-3 footer-links hover:text-text">Visit us</Link>
+          <Link className=" footer-links hover:text-text">about us</Link>
         </div>
-        <div className="w-full sm:w-fit  flex flex-col capitalize">
+        <div className="w-full sm:w-fit  flex flex-col capitalize ">
           <h3 className="mb-4">help</h3>
-          <Link className="mb-3 footer-links">Customer service</Link>
-          <Link className="mb-3 footer-links">return policy</Link>
-          <Link className="mb-3 footer-links">shipping</Link>
-          <Link className="footer-links">terms & conditions</Link>
+          <Link className="mb-3 footer-links hover:text-text">
+            Customer service
+          </Link>
+          <Link className="mb-3 footer-links hover:text-text">
+            return policy
+          </Link>
+          <Link className="mb-3 footer-links hover:text-text">shipping</Link>
+          <Link className="footer-links hover:text-text">
+            terms & conditions
+          </Link>
         </div>
         <div className="w-full sm:w-[20rem] flex flex-col  gap-4">
           <h3>Newsletter</h3>

@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Badge from "@mui/material/Badge";
-import IconButton from "@mui/material/IconButton";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { CartContext } from "../contexts/CartContext";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const { itemAmount } = useContext(CartContext);
 
   const [scrolling, setScrolling] = useState(false);
@@ -21,6 +22,17 @@ const Navbar = () => {
       setScrolling(false);
     }
   };
+
+  // close category menu
+  useEffect(() => {
+    document.addEventListener("mousedown", (e) => {
+      if (!e.target) {
+        setMenuOpen(false);
+        setIsOpen(false);
+      }
+    });
+  });
+  
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -81,8 +93,24 @@ const Navbar = () => {
         <h1>Luxe Vogue</h1>
       </Link>
       <div className="hidden md:flex relative gap-4 ">
-        <Link className="focus:outline-none cursor-pointer text-[0.8rem] py-2 px-2 uppercase text-sec-text hover:text-text font-medium">
+        <Link
+          className="focus:outline-none cursor-pointer text-[0.8rem] py-2 px-2 uppercase text-sec-text hover:text-text font-medium"
+          onClick={() => setIsOpen(!isOpen)}
+        >
           Category
+          {isOpen && (
+            <div className=" bg-background fixed max-w-fit top-16 right-[11rem] px-3 py-2 items-center flex flex-col justify-items-center backdrop-blur-lg rounded-lg">
+              {productCategories.slice(0, 4).map((category, index) => (
+                <Link
+                  to={`/${category}`}
+                  className=" px-4 py-2 hover:bg-border-color text-text w-full"
+                  key={index + 1}
+                >
+                  {category}
+                </Link>
+              ))}
+            </div>
+          )}
         </Link>
 
         <Link

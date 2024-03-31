@@ -10,7 +10,9 @@ const NewArrivals = () => {
         className="absolute top-0 h-full w-full object-cover bg-center z-[2]"
       />
       <h2 className="z-[5]">New Arrivals</h2>
-      <Link to="/" className="btn secondary-btn z-[5]">Shop Now</Link>
+      <Link to="/products" className="btn secondary-btn z-[5]">
+        Shop Now
+      </Link>
     </div>
   );
 };

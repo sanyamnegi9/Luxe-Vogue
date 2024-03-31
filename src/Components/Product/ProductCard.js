@@ -10,7 +10,7 @@ const ProductCard = ({ product }) => {
   return (
     <Link
       to={`/products/${id}/${title}`}
-      className=" bg-background-sec h-[20rem] w-[12rem] flex flex-col items-center gap-2"
+      className=" bg-background-sec h-[20rem] w-full min-[458px]:w-[12rem] flex flex-col items-center gap-2"
       key={id}
     >
       <div className="relative w-[12rem] h-[13rem] bg-white group">

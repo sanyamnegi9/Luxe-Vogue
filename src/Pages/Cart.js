@@ -6,7 +6,7 @@ import CartItemCard from "../Components/CartItemCard";
 const Cart = () => {
   const { cart, ClearCart, total, itemAmount } = useContext(CartContext);
   return (
-    <div className="w-full max-w-[82rem] mx-auto flex flex-col gap-8 mb-8 px-4">
+    <div className="w-full min-h-[74vh] max-w-[82rem] mx-auto flex flex-col gap-8 mb-8 px-4">
       <h2 className=" text-[2.3rem] text-center">Cart</h2>
       <div className="relative w-full flex flex-col md:flex-row sm:mx-auto gap-4">
         {/* card container */}

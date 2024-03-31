@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { SharedHomeLayout, SharedLayout } from "./Components/SharedLayouts";
 import ProtectedRoute from "./Components/ProtectedRoute";
 import {
-  BlogDetails,
   Home,
   Checkout,
   ProductDetails,
@@ -28,7 +27,6 @@ function App() {
               />
             </Route>
             <Route path=":productCategory" element={<Products />} />
-            <Route path="blog/:blogId/:blogTitle" element={<BlogDetails />} />
           </Route>
           <Route path="/" element={<SharedLayout />}>
             <Route path="cart" element={<Cart />} />

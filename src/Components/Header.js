@@ -21,9 +21,9 @@ const Header = () => {
       />
       <div className="absolute top-0 h-[100vh] w-full bg-black/20 z-[1]" />
       <div className="w-full h-full flex flex-col items-center justify-center gap-4">
-        <h1  className="z-[5]">Luxe Vogue</h1>
-        <h2  className="z-[5]">Men's clothing</h2>
-        <h3  className="z-[5]">A modern day miracle</h3>
+        <h1  className="z-[5] text-teal-50">Luxe Vogue</h1>
+        <h2  className="z-[5] text-teal-50">Men's clothing</h2>
+        <h3  className="z-[5] text-teal-50">A modern day miracle</h3>
         <Link to="/products" className="btn secondary-btn z-[5]">Shop now</Link>
       </div>
     </section>
